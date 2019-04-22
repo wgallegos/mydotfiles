@@ -17,8 +17,6 @@ DOTFILES = %w(
   gitmessage
   mrconfig
   mrtrust
-  siegerc
-  spacemacs
   ssh
   tmux.conf
   wgetrc

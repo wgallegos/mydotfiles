@@ -19,7 +19,7 @@
         template = ~/.gitmessage
 
 [github]
-        user = rhoml
+        user = wgallegos
 
 [hub]
         protocol = ssh
@@ -29,9 +29,8 @@
         default = current
 
 [user]
-        name = Rhommel Lamas
-        email = roml@rhommell.com
-        signingkey = A2FE743B
+        name = Wayne Gallegos
+        email = waynegallegos@gmail.com
 
 [pull]
         ff = only

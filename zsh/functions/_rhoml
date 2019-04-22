@@ -1,2 +1,2 @@
-#compdef rhoml
-_files -W $HOME/Development/rhoml -/
+#compdef wgallegos
+_files -W $HOME/Development/wgallegos -/

@@ -3,15 +3,8 @@
 set -e
 
 WHOAMI=$(whoami)
-SPACEMACS_DIR="/Users/${WHOAMI}/.emacs.d"
 OH_MY_ZSH_DIR="/Users/${WHOAMI}/.oh-my-zsh"
 TMUX_TPM_DIR="/Users/${WHOAMI}/.tmux/plugins/tpm"
-
-# Validate .emacs.d is present if not clone spacemacs
-if [ ! -d ${SPACEMACS_DIR} ]; then
-    echo "Installing Spacemacs..."
-    git clone https://github.com/syl20bnr/spacemacs ${SPACEMACS_DIR}
-fi
 
 # Validate Homebrew is installed
 if [ ! $(which brew) ]; then

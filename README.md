@@ -1,7 +1,7 @@
 mydotfiles
 ===
 
-This is a collection of my dotfiles
+This is a collection of dotfiles blatantly ripped off from Rhommel Lamas.
 
 Usage
 ===
@@ -9,7 +9,7 @@ Usage
 There is a bootstrap shellscript that will install all your dependencies.
 
 ```
-git clone git@github.com:rhoml/mydotfiles.git ~/.dotfiles
+git clone git@github.com:wgallegos/mydotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./bootstrap.sh
 ```
@@ -17,8 +17,6 @@ cd ~/.dotfiles
 Assumptions
 ===
 
-* Emacs + Spacemacs
-* Tmux + emacs mode
 * ZSH
 * iTerm2
 
