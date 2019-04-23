@@ -11,7 +11,7 @@ export TERM="xterm-256color"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="sonicradish"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -22,7 +22,7 @@ DISABLE_AUTO_UPDATE="true"
 export UPDATE_ZSH_DAYS=15
 
 # Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
