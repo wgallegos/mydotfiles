@@ -3,7 +3,7 @@
 # zmodload zsh/zprof
 
 # Path to your oh-my-zsh configuration.
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/Users/$USER/bin:/Users/rlamas/.oh-my-zsh/bin:/Users/rlamas/go/bin:~/bin/terraform:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/Users/$USER/bin:/Users/wgallegos/.oh-my-zsh/bin:/Users/wgallegos/go/bin:~/bin/terraform:$PATH"
 export ZSH=$HOME/.oh-my-zsh
 export TERM="xterm-256color"
 
@@ -97,6 +97,3 @@ plugins=(git         \
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
 # [ -f $ZSH/plugins/kube-ps1/kube-ps1.zsh ] && source $ZSH/plugins/kube-ps1/kube-ps1.zsh
-
-# added by travis gem
-[ -f /Users/rlamas/.travis/travis.sh ] && source /Users/rlamas/.travis/travis.sh
