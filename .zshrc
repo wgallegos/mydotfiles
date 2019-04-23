@@ -3,7 +3,7 @@
 # zmodload zsh/zprof
 
 # Path to your oh-my-zsh configuration.
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/Users/$USER/bin:/Users/wgallegos/.oh-my-zsh/bin:/Users/wgallegos/go/bin:~/bin/terraform:$PATH"
+export PATH="/usr/local/sbin:/usr/local/opt/coreutils/libexec/gnubin:/Users/$USER/bin:/Users/wgallegos/.oh-my-zsh/bin:/Users/wgallegos/go/bin:~/bin/terraform:$PATH"
 export ZSH=$HOME/.oh-my-zsh
 export TERM="xterm-256color"
 
@@ -11,7 +11,7 @@ export TERM="xterm-256color"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sonicradish"
+ZSH_THEME="agnoster"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 

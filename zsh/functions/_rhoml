@@ -1,2 +1,0 @@
-#compdef wgallegos
-_files -W $HOME/Development/wgallegos -/
