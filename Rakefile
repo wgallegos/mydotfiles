@@ -19,6 +19,7 @@ DOTFILES = %w(
   mrtrust
   ssh
   tmux.conf
+  vimrc
   wgetrc
   zprofile
   zsh.d
