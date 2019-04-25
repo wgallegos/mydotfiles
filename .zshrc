@@ -97,3 +97,6 @@ plugins=(git         \
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
 # [ -f $ZSH/plugins/kube-ps1/kube-ps1.zsh ] && source $ZSH/plugins/kube-ps1/kube-ps1.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
