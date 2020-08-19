@@ -11,7 +11,7 @@ export TERM="xterm-256color"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sonicradish"
+ZSH_THEME="agnoster"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -22,7 +22,7 @@ DISABLE_AUTO_UPDATE="true"
 export UPDATE_ZSH_DAYS=15
 
 # Uncomment following line if you want to disable colors in ls
-DISABLE_LS_COLORS="true"
+ DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -45,7 +45,7 @@ config_files=(~/.zsh.d/**/*.zsh)
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
-  source $file
+ source $file
 done
 
 # load everything but the path and completion files
@@ -55,7 +55,7 @@ do
 done
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
+autoload -Uz compinit
 compinit -D ~/Users/$USER/.zcompdump
 
 # load every completion after autocomplete loads
@@ -69,11 +69,11 @@ unset config_files
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git         \
-         battery     \
+plugins=(battery     \
+         # git       \
          extract     \
          osx         \
-         go          \
+         # go        \
          rbenv       \
          bgnotify    \
          copydir     \
@@ -82,21 +82,34 @@ plugins=(git         \
          cp          \
          docker      \
          docker-compose \
-         emoji       \
-         github      \
+         # emoji     \
+         # github    \
          golang      \
-         jira        \
+         # jira      \
          jsontools   \
          terraform   \
          branch      \
-         # kube-ps1    \
-         kubectl \
-         dotenv
+         kube-ps1    \
+         kubectl     \
+         # dotenv    \
+         aws         \
+         zsh-autosuggestions
 )
 
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 
-# [ -f $ZSH/plugins/kube-ps1/kube-ps1.zsh ] && source $ZSH/plugins/kube-ps1/kube-ps1.zsh
+[ -f $ZSH/plugins/kube-ps1/kube-ps1.zsh ] && source $ZSH/plugins/kube-ps1/kube-ps1.zsh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# zprof
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/config-apptio-clusters
+
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+alias k=kubectl
+complete -F __start_kubectl k
