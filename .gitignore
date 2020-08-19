@@ -54,6 +54,8 @@ known_hosts
 id_ed*
 id_rsa*
 .pre-commit-config.yaml
+*.pem
+.ssh*
  
 # Particular location files #
 #############################
