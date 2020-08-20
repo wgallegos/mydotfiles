@@ -11,7 +11,8 @@ export TERM="xterm-256color"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+#ZSH_THEME="sonicradish"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -113,3 +114,6 @@ source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 alias k=kubectl
 complete -F __start_kubectl k
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
