@@ -17,6 +17,7 @@ DOTFILES = %w(
   gitmessage
   mrconfig
   mrtrust
+  p10k.zsh
   ssh
   tmux.conf
   vimrc

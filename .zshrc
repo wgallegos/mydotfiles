@@ -94,7 +94,8 @@ plugins=(battery     \
          kubectl     \
          # dotenv    \
          aws         \
-         zsh-autosuggestions
+         zsh-autosuggestions\
+         zsh-syntax-highlighting
 )
 
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
@@ -112,8 +113,16 @@ export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/config-apptio-clusters
 
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
-alias k=kubectl
+alias k="kubectl"
+alias kctx="kubectx"
+alias kns="kubens"
 complete -F __start_kubectl k
+HIST_FORMAT="'%Y-%m-%d %T'$(echo -e '\t')"
+alias history="fc -t "$HIST_FORMAT" -il 1"
+
+#AWS logins
+alias aws-login-engineering='docker run --rm -it -v ~/.aws:/root/.aws docker.apps.papt.to/engineering-tools/aws-azure-login:2.1.0 --profile engineering --no-prompt'
+alias aws-login-fcp-prod='docker run --rm -it -v ~/.aws:/root/.aws docker.apps.papt.to/engineering-tools/aws-azure-login:2.1.0 --profile fcp-prod --no-prompt'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
