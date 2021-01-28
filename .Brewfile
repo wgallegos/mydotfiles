@@ -95,7 +95,7 @@ cask "slack"
 cask "spectacle"
 cask "viscosity"
 cask "wireshark"
-mas "Install macOS Catalina", id: 0
+#mas "Install macOS Catalina", id: 0
 
 #Apptio specific
 brew "techops/tools/kingpin-cli"
