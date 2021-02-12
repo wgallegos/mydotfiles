@@ -18,6 +18,9 @@ if [ ! -d ${OH_MY_ZSH_DIR} ]; then
     git clone git://github.com/robbyrussell/oh-my-zsh.git ${OH_MY_ZSH_DIR}
 fi
 
+echo "Installing p10k theme"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 # Validate TMUX TPM is present
 if [ ! -d ${TMUX_TPM_DIR} ]; then
     echo "Installing tmux tpm..."
