@@ -114,6 +114,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 export KUBECONFIG=$HOME/.kube/config:$HOME/.kube/config-apptio-clusters
+export PATH="${PATH}:${HOME}/.krew/bin"
 
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
