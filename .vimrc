@@ -80,6 +80,17 @@ map <F7> mzgg=G`z
 " Enable ftplugin
 filetype plugin indent on
 
+" Specify a directory for plugins
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" vim-jsonnet plugin
+Plug 'google/vim-jsonnet'
+Plug 'hashivim/vim-terraform'
+Plug 'rodjek/vim-puppet'
+" Initialize plugin system
+call plug#end()
+
 "let g:netrw_banner = 0
 "let g:netrw_liststyle = 3
 "#let g:netrw_browse_split = 4
